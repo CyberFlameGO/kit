@@ -162,11 +162,9 @@ func MakeHandlerWithCsp(rh RequestHandler, eh ErrorHandler, customCsp map[string
 				logger.Printf("2 error from error handler: %s", e.Error())
 			}
 			//set strict csp for error page
-			setBestPracticeHeaders(w, r, strictCsp, "")
-		} else {
-			setBestPracticeHeaders(w, r, customCsp, "")
+			customCsp = strictCsp
 		}
-
+		setBestPracticeHeaders(w, r, customCsp, "")
 		logRequest(r)
 
 		t.Stop()
@@ -212,10 +210,10 @@ func MakeHandlerWithCspNonce(rh RequestHandlerWithNonce, eh ErrorHandler, custom
 				logger.Printf("2 error from error handler: %s", e.Error())
 			}
 			//set strict csp for error page
-			setBestPracticeHeaders(w, r, strictCsp, nonce)
-		} else {
-			setBestPracticeHeaders(w, r, customCsp, nonce)
+			//set strict csp for error page
+			customCsp = strictCsp
 		}
+		setBestPracticeHeaders(w, r, customCsp, nonce)
 
 		logRequest(r)
 
