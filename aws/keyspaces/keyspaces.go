@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/gocql/gocql"
 )
@@ -48,6 +49,8 @@ func New(certPath string) (Keyspaces, error) {
 	cluster.Consistency = gocql.LocalQuorum
 	// Disable initial host lookup
 	cluster.DisableInitialHostLookup = true
+	// Set timeout
+	cluster.ConnectTimeout = time.Second * 2
 
 	// Create and return session.
 	session, err := cluster.CreateSession()
