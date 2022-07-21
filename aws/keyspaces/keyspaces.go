@@ -52,6 +52,10 @@ func New(certPath string) (Keyspaces, error) {
 	// Set timeout
 	cluster.ConnectTimeout = time.Second * 2
 
+	// Debug
+	// cluster.WriteCoalesceWaitTime = 2
+	cluster.Timeout = time.Second * 2
+
 	// Create and return session.
 	session, err := cluster.CreateSession()
 	if err != nil {
