@@ -50,8 +50,8 @@ func New(certPath string) (Keyspaces, error) {
 	// Disable initial host lookup
 	cluster.DisableInitialHostLookup = true
 	// Set timeout
-	cluster.ConnectTimeout = time.Second * 2
-	cluster.Timeout = time.Second * 2
+	cluster.ConnectTimeout = time.Second * 5
+	cluster.Timeout = time.Second * 5
 
 	// Create and return session.
 	session, err := cluster.CreateSession()
