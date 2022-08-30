@@ -1,0 +1,15 @@
+{
+  "name": "@geonet-callumt-test/web-components",
+  "version": "1.0.33",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://geonet-615890063537.d.codeartifact.ap-southeast-2.amazonaws.com/npm/geonet-callum-test/"
+  }
+}
