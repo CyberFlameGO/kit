@@ -3,35 +3,20 @@ import Template from './geonet-header-template.js';
 export default class GeoNetHeader extends HTMLElement {
 
     connectedCallback() {
-        // if (this.react === 'true') {
-        //     this.innerHTML = Template.htmlReact({
-        //         origin: this.origin,
-        //         home: this.home,
-        //         earthquake: this.earthquake,
-        //         landslide: this.landslide,
-        //         tsunami: this.tsunami,
-        //         volcano: this.volcano,
-        //         data: this.data,
-        //     });
-        // } else {
-        //     this.innerHTML = Template.html({
-        //         origin: this.origin,
-        //     });
-        // }
-
         this.innerHTML = Template.html({
             origin: this.origin,
-            home: this.home,
             earthquake: this.earthquake,
             landslide: this.landslide,
             tsunami: this.tsunami,
             volcano: this.volcano,
-            data: this.data,
+            datadiscovery: this.datadiscovery,
+            datatypes: this.datatypes,
+            dataaccess: this.dataaccess,
         });
     }
 
     static get observedAttributes() {
-        return ['origin','react','earthquake','landslide','tsunami','volcano','data'];
+        return ['origin','earthquake','landslide','tsunami','volcano','datadiscovery','datatypes','dataaccess'];
     }
     // origin getter and setters.
     get origin() {
@@ -39,13 +24,6 @@ export default class GeoNetHeader extends HTMLElement {
     }
     set origin(val) {
         this.setAttribute('origin', val);
-    }
-    // react getter and setters.
-    get react() {
-        return this.hasAttribute('react') ? this.getAttribute('react') : 'false';
-    }
-    set react(val) {
-        this.setAttribute('react', val);
     }
     // earthquake getter and setters.
     get earthquake() {
@@ -75,12 +53,26 @@ export default class GeoNetHeader extends HTMLElement {
     set volcano(val) {
         this.setAttribute('volcano', val);
     }
-    // data getter and setters.
-    get data() {
-        return this.hasAttribute('data') ? this.getAttribute('data') : 'false';
+    // datadiscovery getter and setters.
+    get datadiscovery() {
+        return this.hasAttribute('datadiscovery') ? this.getAttribute('datadiscovery') : 'false';
     }
-    set data(val) {
-        this.setAttribute('data', val);
+    set datadiscovery(val) {
+        this.setAttribute('datadiscovery', val);
+    }
+    // datatypes getter and setters.
+    get datatypes() {
+        return this.hasAttribute('datatypes') ? this.getAttribute('datatypes') : 'false';
+    }
+    set datatypes(val) {
+        this.setAttribute('datatypes', val);
+    }
+    // dataaccess getter and setters.
+    get dataaccess() {
+        return this.hasAttribute('dataaccess') ? this.getAttribute('dataaccess') : 'false';
+    }
+    set dataaccess(val) {
+        this.setAttribute('dataaccess', val);
     }
 }
 

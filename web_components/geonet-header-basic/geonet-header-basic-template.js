@@ -56,9 +56,9 @@ export default {
             <li class="nav-item">
                 <a
                     class="nav-link"
-                    href=${linkURLs[i]}
-                    rel=${rel}
-                    title=${links[i]}
+                    href="${linkURLs[i]}"
+                    rel="${rel}"
+                    title="${links[i]}"
                 >
                     ${leftImg}${links[i]}${rightImg}
                 </a>
