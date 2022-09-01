@@ -520,6 +520,17 @@ export default {
                                 </a>
                             </div>
                         </li>
+                        <li class="nav-item d-lg-none bg-secondary p-3">
+                            <input type="text" placeholder="Search" aria-label="Search" class="input-small">
+                            <img src="../icons/search.svg" class="p-1 bg-info">
+                        </li>
+                        <li class="nav-item d-lg-none bg-secondary p-3">
+                            <a href="http://www.eqc.govt.nz/" class="text-white ms-4">Toka Tū Ake EQC</a>
+                            <img src="../icons/external.svg" class="pb-1">
+                            <div class="vr text-white"></div>
+                            <a href="http://www.gns.cri.nz/" class="text-white ms-4">GNS Science</a>
+                            <img src="../icons/external.svg" class="pb-1">
+                        </li>
                     </ul>
                 </div>
             </div>
