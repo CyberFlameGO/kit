@@ -1,0 +1,38 @@
+/* Projects that import the GeoNet header must contain the following CSS in
+the HTML files that use it. These are extra styles on top of the standard
+GeoNet Bootstrap.css file (which also needs to be present) */
+
+.searchInput, .searchInputBtn {
+    height: 34px;
+}
+.searchInput {
+    width: 220px; /* Fixed width required to ensure a smooth animation */
+    color: #3C3D4A !important;
+}
+.searchInputBtn {
+    background-color: #8D0020;
+    width: 34px;
+    padding: 0px;
+}
+.searchInputBtn>.fa-search {
+    position: inherit !important;
+}
+.searchInputBtn.collapsed {
+    background-color: transparent;
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:  #3C3D4A;
+    opacity: 1; /* Firefox */
+}
+#mobile-search-item {
+    background-color: #62636E;
+}
+.external-link::after{
+    font-family:FontAwesome;
+    content:"\f08e";
+    font-size:12px;
+    color:#fff;
+    vertical-align:middle;
+    padding:0 5px;
+    display: inline-block;
+}
